@@ -1,18 +1,16 @@
 // complete the given function
 
 function palindrome(str){
-function isPalindrome(string) {
-    // Convert the string to lowercase
-    string = string.toLowerCase();
-    // Reverse the string
-    let reversedString = string.split('').reverse().join('');
-    // Compare the reversed string to the original string
-    if (string === reversedString) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
+  let rev_str = "";
+      for( let i = str.length-1 ;i >= 0 ;i--)
+      {
+        rev_str+= str[i];
+      }
+      // return reverse string
+      if (str.toLowerCase()===rev_str.toLowerCase()) {
+          return true
+      } else {
+          return false
+      }
 }
 module.exports = palindrome
